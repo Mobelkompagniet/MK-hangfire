@@ -1,4 +1,4 @@
-namespace mk_booker_jobs;
+namespace mk_Hangfire;
 
 
 public class AppSettings

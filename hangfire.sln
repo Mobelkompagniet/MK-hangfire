@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hangfire", "hangfire.csproj", "{B3996DFA-B34D-DDAD-D01C-487A089096CC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B4342999-5E04-555D-524F-0068A4C6EC38} = {B4342999-5E04-555D-524F-0068A4C6EC38}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "item-synchronizer", "..\item-synchronizer\item-synchronizer.csproj", "{B4342999-5E04-555D-524F-0068A4C6EC38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,6 +19,10 @@ Global
 		{B3996DFA-B34D-DDAD-D01C-487A089096CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3996DFA-B34D-DDAD-D01C-487A089096CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3996DFA-B34D-DDAD-D01C-487A089096CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4342999-5E04-555D-524F-0068A4C6EC38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4342999-5E04-555D-524F-0068A4C6EC38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4342999-5E04-555D-524F-0068A4C6EC38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4342999-5E04-555D-524F-0068A4C6EC38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

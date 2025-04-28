@@ -2,7 +2,7 @@ using Hangfire;
 using Hangfire.Console;
 using Hangfire.PostgreSql;
 using Microsoft.Extensions.Options;
-using mk_booker_jobs;
+using mk_Hangfire;
 
 // Create the builder and the app
 var builder = WebApplication.CreateBuilder(args);
@@ -56,6 +56,16 @@ app.Logger.LogInformation($"Using appsettings.json file at: {appSettingsPath}");
 // Allow hangfire dashboard access with authorization
 var options = new DashboardOptions { Authorization = [new HangfireAuthorizationFilter()] };
 app.UseHangfireDashboard("", options);
+
+
+// Configure recurring job
+string[] argument = ["non-bundle"];
+RecurringJob.AddOrUpdate<item_synchronizer.SynchronizerRunner>(
+    recurringJobId: "sms-booking-notification",
+    methodCall: job => job.Run(argument, null),
+    cronExpression: Cron.Never
+);
+
 
 
 app.Run("http://0.0.0.0:5789");
