@@ -2,16 +2,18 @@ services:
   # Your Dotnet application
   app:
     build: .
+    image: hangfire-app
+    pull_policy: never
     restart: unless-stopped
     depends_on:
       - db
     environment:
       - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Username=admin;Password=0HJ+Obpd+HJqCGdcVoKy;Database=postgres
     ports:
-      - "5000:80"
+      - "5000:5789"
     networks:
       - mk_network
-  # Database for storing booking data
+  # Database for storing data
   db:
     image: postgres:14.1-alpine
     restart: unless-stopped
