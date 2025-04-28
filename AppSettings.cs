@@ -1,4 +1,4 @@
-namespace mk_Hangfire;
+namespace mk_hangfire;
 
 
 public class AppSettings

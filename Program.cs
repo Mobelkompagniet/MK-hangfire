@@ -2,7 +2,7 @@ using Hangfire;
 using Hangfire.Console;
 using Hangfire.PostgreSql;
 using Microsoft.Extensions.Options;
-using mk_Hangfire;
+using mk_hangfire;
 
 // Create the builder and the app
 var builder = WebApplication.CreateBuilder(args);
@@ -57,7 +57,6 @@ app.Logger.LogInformation($"Using appsettings.json file at: {appSettingsPath}");
 var options = new DashboardOptions { Authorization = [new HangfireAuthorizationFilter()] };
 app.UseHangfireDashboard("", options);
 
-
 // Configure recurring job
 string[] argument = ["non-bundle"];
 RecurringJob.AddOrUpdate<item_synchronizer.SynchronizerRunner>(
@@ -65,7 +64,5 @@ RecurringJob.AddOrUpdate<item_synchronizer.SynchronizerRunner>(
     methodCall: job => job.Run(argument, null),
     cronExpression: Cron.Never
 );
-
-
 
 app.Run("http://0.0.0.0:5789");
