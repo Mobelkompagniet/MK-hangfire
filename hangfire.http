@@ -1,0 +1,6 @@
+@mk_booker_jobs_HostAddress = http://localhost:5023
+
+GET {{mk_booker_jobs_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

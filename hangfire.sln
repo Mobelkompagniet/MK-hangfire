@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hangfire", "hangfire.csproj", "{B3996DFA-B34D-DDAD-D01C-487A089096CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3996DFA-B34D-DDAD-D01C-487A089096CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3996DFA-B34D-DDAD-D01C-487A089096CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3996DFA-B34D-DDAD-D01C-487A089096CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3996DFA-B34D-DDAD-D01C-487A089096CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7578E2ED-ED0F-4CEF-BE07-E4D7376E57D5}
+	EndGlobalSection
+EndGlobal

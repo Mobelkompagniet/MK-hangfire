@@ -1,0 +1,18 @@
+services:
+  # Database for storing booking data
+  db:
+    image: postgres:14.1-alpine
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=0HJ+Obpd+HJqCGdcVoKy
+    ports:
+      - "7432:5432"
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    networks:
+      - mk_network
+
+networks:
+  mk_network:
+    driver: bridge
