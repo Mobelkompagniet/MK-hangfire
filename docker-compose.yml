@@ -1,4 +1,16 @@
 services:
+  # Your Dotnet application
+  app:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      - db
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Username=admin;Password=0HJ+Obpd+HJqCGdcVoKy;Database=postgres
+    ports:
+      - "5000:80"
+    networks:
+      - mk_network
   # Database for storing booking data
   db:
     image: postgres:14.1-alpine
