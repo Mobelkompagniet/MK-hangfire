@@ -3,6 +3,7 @@ using Hangfire.Console;
 using Hangfire.PostgreSql;
 using Microsoft.Extensions.Options;
 using mk_hangfire;
+using SmartPack;
 
 // Create the builder and the app
 var builder = WebApplication.CreateBuilder(args);
@@ -17,10 +18,12 @@ if (string.IsNullOrEmpty(appSettingsPath))
 var settings = new AppSettings();
 var configuration = new ConfigurationBuilder()
     .AddJsonFile(appSettingsPath, optional: false, reloadOnChange: false)
-    .AddJsonFile("appsettings.local.json", optional: true, reloadOnChange: true) //load local settings
+    .AddJsonFile("appsettings.local.json", optional: false, reloadOnChange: true) //load local settings
     .Build();
     
 configuration.Bind(settings);
+
+SPCtxSingleton.InitializeSettings(settings.SmartPack.APIUrl, settings.SmartPack.AppId, settings.SmartPack.AppToken);
 
 // Register settings in DI
 builder.Services.Configure<AppSettings>(configuration);

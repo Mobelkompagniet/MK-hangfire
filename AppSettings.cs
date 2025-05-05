@@ -25,4 +25,5 @@ public class SmartPackAccessInformation
     public required string APIUrl { get; set; }
     public required string AppId { get; set; }
     public required string AppToken { get; set; }
+    public required string Test { get; set; }
 }
