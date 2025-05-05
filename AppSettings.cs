@@ -5,7 +5,7 @@ public class AppSettings
 {
     public ConnectionStrings ConnectionStrings { get; set; } = null!;
     public ShopifyAccessInformation ShopifyAccessInformation { get; set; } = null!;
-    public SmartPackAccessInformation SmartPack { get; set; } = null;
+    public SmartPackAccessInformation SmartPack { get; set; } = null!;
 
 }
 
