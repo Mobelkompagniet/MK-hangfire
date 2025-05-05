@@ -35,17 +35,14 @@ dotnet publish "./mk_hangfire.csproj" -c Release -o ./app/publish /p:UseAppHost=
 Write-Host "Building image: $imageName" -ForegroundColor Green
 docker compose build
 
-Write-Host "Saving image: $imageName" -ForegroundColor Green
-docker save -o $imagePath $imageName
-
-Write-Host "Copying image to server" -ForegroundColor Green
-Invoke-Expression "scp $imagePath root@$ip`:$remote_dockerPath/"
+Write-Host "Pushing image to registry" -ForegroundColor Green
+docker compose push
 
 Write-Host "Copying $composeFile to server" -ForegroundColor Green
 Invoke-Expression "scp $composeFile root@$ip`:$remote_dockerPath/$composeFile"
 
-Write-Host "Loading image on server" -ForegroundColor Green
-Invoke-Expression "ssh root@$ip 'docker load -i $remote_dockerPath/$imageName.tar'"
+Write-Host "Pulling images from registry" -ForegroundColor Green
+Invoke-Expression "ssh root@$ip 'docker compose -f $remote_dockerPath/$composeFile pull'"
 
 Write-Host "Compose down" -ForegroundColor Green
 Invoke-Expression "ssh root@$ip 'docker compose -f $remote_dockerPath/$composeFile down'"
