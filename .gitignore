@@ -4,5 +4,8 @@ obj
 bin
 .vs
 db
-
 app
+
+
+# Sensitive app settings
+appsettings.local.json

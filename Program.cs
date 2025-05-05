@@ -17,7 +17,9 @@ if (string.IsNullOrEmpty(appSettingsPath))
 var settings = new AppSettings();
 var configuration = new ConfigurationBuilder()
     .AddJsonFile(appSettingsPath, optional: false, reloadOnChange: false)
+    .AddJsonFile("appsettings.local.json", optional: true, reloadOnChange: true) //load local settings
     .Build();
+    
 configuration.Bind(settings);
 
 // Register settings in DI

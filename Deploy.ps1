@@ -24,6 +24,8 @@ else {
 
 Write-Host "--------- (DOCKER DEPLOYMENT) ---------" -ForegroundColor Cyan
 
+Remove-Item -Recurse -Force -Path "./app/*"
+
 Write-Host "Building project: mk_hangfire" -ForegroundColor Green
 dotnet build "./mk_hangfire.csproj" -c Release -o ./app/build
 
