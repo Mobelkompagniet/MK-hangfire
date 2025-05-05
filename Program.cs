@@ -60,7 +60,7 @@ app.UseHangfireDashboard("", options);
 // Configure recurring job
 string[] argument = ["non-bundle"];
 RecurringJob.AddOrUpdate<item_synchronizer.SynchronizerRunner>(
-    recurringJobId: "sms-booking-notification",
+    recurringJobId: "update-product-dimensions",
     methodCall: job => job.Run(argument, null),
     cronExpression: Cron.Never
 );

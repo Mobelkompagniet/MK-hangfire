@@ -1,13 +1,9 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.5.2.0
+VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mk_hangfire", "mk_hangfire.csproj", "{B3996DFA-B34D-DDAD-D01C-487A089096CC}"
-	ProjectSection(ProjectDependencies) = postProject
-		{B4342999-5E04-555D-524F-0068A4C6EC38} = {B4342999-5E04-555D-524F-0068A4C6EC38}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "item-synchronizer", "..\item-synchronizer\item-synchronizer.csproj", "{B4342999-5E04-555D-524F-0068A4C6EC38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mk_hangfire", "mk_hangfire.csproj", "{1D8BC3F0-9364-C62C-0E75-9B9E5FE87087}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,19 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B3996DFA-B34D-DDAD-D01C-487A089096CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B3996DFA-B34D-DDAD-D01C-487A089096CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B3996DFA-B34D-DDAD-D01C-487A089096CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B3996DFA-B34D-DDAD-D01C-487A089096CC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B4342999-5E04-555D-524F-0068A4C6EC38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4342999-5E04-555D-524F-0068A4C6EC38}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4342999-5E04-555D-524F-0068A4C6EC38}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4342999-5E04-555D-524F-0068A4C6EC38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D8BC3F0-9364-C62C-0E75-9B9E5FE87087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D8BC3F0-9364-C62C-0E75-9B9E5FE87087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D8BC3F0-9364-C62C-0E75-9B9E5FE87087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D8BC3F0-9364-C62C-0E75-9B9E5FE87087}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7578E2ED-ED0F-4CEF-BE07-E4D7376E57D5}
+		SolutionGuid = {24E693C9-5126-4B61-BCCB-98F1A0D3B7BC}
 	EndGlobalSection
 EndGlobal

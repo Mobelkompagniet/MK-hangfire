@@ -24,6 +24,11 @@ else {
 
 Write-Host "--------- (DOCKER DEPLOYMENT) ---------" -ForegroundColor Cyan
 
+Write-Host "Building project: mk_hangfire" -ForegroundColor Green
+dotnet build "./mk_hangfire.csproj" -c Release -o ./app/build
+
+Write-Host "Publishing project: mk_hangfire" -ForegroundColor Green
+dotnet publish "./mk_hangfire.csproj" -c Release -o ./app/publish /p:UseAppHost=false
 
 Write-Host "Building image: $imageName" -ForegroundColor Green
 docker compose build
